@@ -34,8 +34,8 @@ def app():
 
     # Text input for user message
     user_input = st.text_area("Your prompt:")
-    
-    models = aiplatform.Model.list()
+
+    models = vertexai.Model.list()
     for model in models:
         st.write(model.name)
         st.write(model.display_name)
