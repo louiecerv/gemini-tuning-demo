@@ -3,6 +3,7 @@ import base64
 import vertexai
 from vertexai.generative_models import GenerativeModel, Part
 import vertexai.preview.generative_models as generative_models
+import pandas
 
 generation_config = {
     "max_output_tokens": 2048,
@@ -25,7 +26,7 @@ def app():
     model = GenerativeModel(
     #"gemini-1.0-pro-001",
     #"gemini-1.5-pro-preview-0409",
-    "akeanon-tuned2"
+    "projects/694867466117/locations/asia-southeast1/endpoints/6987748238237368320"
     )
 
     chat = model.start_chat()
