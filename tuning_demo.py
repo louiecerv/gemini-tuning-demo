@@ -26,7 +26,7 @@ def app():
     model = GenerativeModel(
     #"gemini-1.0-pro-001",
     #"gemini-1.5-pro-preview-0409",
-    "projects/694867466117/locations/asia-southeast1/endpoints/6987748238237368320"
+    "projects/694867466117/locations/asia-southeast1/endpoints/5675511896812290048"
     )
 
     st.write("Use akeanon sentences for testing.")
@@ -49,7 +49,7 @@ def app():
         chat_history.append({"speaker": "User", "message": user_input})
 
         # Generate response from Gemma
-        bot_response = chat.send_message("f[{user_input}]",
+        bot_response = chat.send_message(user_input,
             #generation_config=generation_config,
             #safety_settings=safety_settings
         )
