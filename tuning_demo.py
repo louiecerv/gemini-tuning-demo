@@ -29,6 +29,12 @@ def app():
     "projects/694867466117/locations/asia-southeast1/endpoints/6987748238237368320"
     )
 
+    st.write("Use akeanon sentences for testing.")
+    # read the data
+    df = pandas.read_csv('akeanon-sentences.csv')
+    # display the data
+    st.write(df)    
+
     chat = model.start_chat()
 
     # Initialize chat history
