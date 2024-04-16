@@ -7,7 +7,7 @@ import pandas
 
 generation_config = {
     "max_output_tokens": 2048,
-    "temperature": 0.9,
+    "temperature": 1,
     "top_p": 1,
 }
 
@@ -49,9 +49,9 @@ def app():
         chat_history.append({"speaker": "User", "message": user_input})
 
         # Generate response from Gemma
-        bot_response = chat.send_message(user_input,
-            generation_config=generation_config,
-            safety_settings=safety_settings
+        bot_response = chat.send_message("f[{user_input}]",
+            #generation_config=generation_config,
+            #safety_settings=safety_settings
         )
 
         # Access the content section within the candidates dictionary
