@@ -24,7 +24,8 @@ def app():
     vertexai.init(project="learn-vertex-ai-417510", location="asia-southeast1")
     model = GenerativeModel(
     #"gemini-1.0-pro-001",
-    "gemini-1.5-pro-preview-0409",
+    #"gemini-1.5-pro-preview-0409",
+    "akeanon-tuned2"
     )
 
     chat = model.start_chat()
@@ -34,14 +35,6 @@ def app():
 
     # Text input for user message
     user_input = st.text_area("Your prompt:")
-
-    models = vertexai.Model.list()
-    for model in models:
-        st.write(model.name)
-        st.write(model.display_name)
-        st.write(model.create_time)
-        st.write(model.state)
-        st.write("-" * 20)
 
     # Button to submit message
     if st.button("Get Response"):
